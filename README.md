@@ -1,0 +1,1 @@
+# A Typing Test
