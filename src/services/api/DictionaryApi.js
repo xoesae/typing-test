@@ -8,6 +8,4 @@ const DictionaryApi = axios.create({
     headers: {'Accept': 'application/json'},
 })
 
-const randomWord = () => DictionaryApi.get('/random')
-
 export default DictionaryApi

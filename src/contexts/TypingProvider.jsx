@@ -1,9 +1,8 @@
-import { createContext, useContext, useState } from "react"
+import { useState } from "react"
+import TypingContext from "./TypingContext"
 import DictionaryApi from "../services/api/DictionaryApi"
 
-export const TypingContext = createContext()
-
-export const TypingProvider = ({ children }) => {
+function TypingProvider({ children }) {
     const [typing, setTyping] = useState('')
     const [actualWord, setActualWord] = useState('')
     const [words, setWords] = useState([])
@@ -99,6 +98,4 @@ export const TypingProvider = ({ children }) => {
     )
 }
 
-export const useTyping = () => {
-    return useContext(TypingContext)
-}
+export default TypingProvider

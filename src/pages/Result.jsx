@@ -1,5 +1,6 @@
-import { useDeadline } from "../contexts/DeadlineProvider"
-import { useTyping } from "../contexts/TypingProvider"
+
+import useTyping from "../hooks/useTyping"
+import useDeadline from "../hooks/useDeadline"
 import { getPrecision } from "../utils/helpers"
 
 function Result() {
@@ -38,13 +39,13 @@ function Result() {
                 </div>
             </div>
 
-            <button 
+            <button
                 className="bg-blue-500 hover:bg-blue-700 active:bg-blue-800 text-white font-bold py-2 px-4 rounded w-full mt-4"
                 onClick={handlePlayAgain}
             >
                 Jogar Novamente
             </button>
-        </div>        
+        </div>
     </>)
 }
 

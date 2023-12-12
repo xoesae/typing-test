@@ -1,7 +1,7 @@
-import { useTyping } from "../contexts/TypingProvider"
+import useTyping from "../hooks/useTyping"
 
-function TypingInput({ handleTyping }) {
-    const { typing } = useTyping()
+function TypingInput() {
+    const { typing, handleTyping } = useTyping()
 
     return (
         <input

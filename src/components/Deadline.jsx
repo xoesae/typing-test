@@ -1,5 +1,5 @@
 import { formatTime } from "../utils/formatters"
-import { useDeadline } from "../contexts/DeadlineProvider"
+import useDeadline from "../hooks/useDeadline"
 
 function Deadline() {
     const {deadline, minutes, seconds } = useDeadline()

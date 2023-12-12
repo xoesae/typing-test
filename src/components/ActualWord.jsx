@@ -1,4 +1,4 @@
-import { useTyping } from "../contexts/TypingProvider"
+import useTyping from "../hooks/useTyping"
 
 function ActualWord() {
     const { typing, actualWord } = useTyping()

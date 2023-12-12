@@ -1,4 +1,4 @@
-import { useDeadline } from './contexts/DeadlineProvider'
+import useDeadline from './hooks/useDeadline'
 import Home from './pages/Home'
 import Result from './pages/Result'
 

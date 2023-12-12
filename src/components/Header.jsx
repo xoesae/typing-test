@@ -1,4 +1,4 @@
-import { useTyping } from '../contexts/TypingProvider'
+import useTyping from '../hooks/useTyping'
 import { getPrecision } from '../utils/helpers'
 
 function Header() {

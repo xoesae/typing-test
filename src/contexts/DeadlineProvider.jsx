@@ -1,11 +1,10 @@
-import { createContext, useContext, useEffect, useState } from "react"
-import { useTyping } from "./TypingProvider"
+import { useEffect, useState } from "react"
+import useTyping from "../hooks/useTyping"
+import DeadlineContext from "./DeadlineContext"
 
 const INITIAL_DEADLINE_IN_SECONDS = 60
 
-export const DeadlineContext = createContext()
-
-export const DeadlineProvider = ({ children }) => {
+function DeadlineProvider ({ children }) {
     const { started } = useTyping()
     const [deadline, setDeadline] = useState(INITIAL_DEADLINE_IN_SECONDS)
     const [isEnded, setIsEnded] = useState(false)
@@ -48,6 +47,4 @@ export const DeadlineProvider = ({ children }) => {
     )
 }
 
-export const useDeadline = () => {
-    return useContext(DeadlineContext)
-}
+export default DeadlineProvider
